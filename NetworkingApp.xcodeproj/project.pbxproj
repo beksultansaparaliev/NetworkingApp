@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D869D9A28A0DB0400702349 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D869D9928A0DB0400702349 /* NetworkManager.swift */; };
+		5D869D9D28A0DCCB00702349 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5D869D9C28A0DCCB00702349 /* Alamofire */; };
 		5DA5C912289FCA8600F900C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA5C911289FCA8600F900C3 /* AppDelegate.swift */; };
 		5DA5C919289FCA8600F900C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA5C917289FCA8600F900C3 /* Main.storyboard */; };
 		5DA5C91B289FCA8700F900C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA5C91A289FCA8700F900C3 /* Assets.xcassets */; };
@@ -20,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D869D9928A0DB0400702349 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5DA5C90E289FCA8600F900C3 /* NetworkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA5C911289FCA8600F900C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA5C918289FCA8600F900C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,12 +42,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D869D9D28A0DCCB00702349 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D869D9328A0DA2400702349 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				5DA5C91A289FCA8700F900C3 /* Assets.xcassets */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		5D869D9428A0DA4700702349 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5DA5C911289FCA8600F900C3 /* AppDelegate.swift */,
+				5DA5C91F289FCA8700F900C3 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5D869D9528A0DA7600702349 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DA5C927289FCACA00F900C3 /* Course.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D869D9628A0DA8200702349 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5DA5C92B289FCAD800F900C3 /* CourseCell.swift */,
+				5DA5C929289FCAD200F900C3 /* UserActionCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5D869D9728A0DA8A00702349 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DA5C925289FCABF00F900C3 /* MainViewController.swift */,
+				5DA5C92F289FCAF600F900C3 /* ImageViewcontroller.swift */,
+				5DA5C92D289FCAED00F900C3 /* CoursesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5D869D9828A0DAE800702349 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5D869D9928A0DB0400702349 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5DA5C905289FCA8600F900C3 = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +120,14 @@
 		5DA5C910289FCA8600F900C3 /* NetworkingApp */ = {
 			isa = PBXGroup;
 			children = (
-				5DA5C911289FCA8600F900C3 /* AppDelegate.swift */,
-				5DA5C925289FCABF00F900C3 /* MainViewController.swift */,
-				5DA5C92F289FCAF600F900C3 /* ImageViewcontroller.swift */,
-				5DA5C92D289FCAED00F900C3 /* CoursesViewController.swift */,
-				5DA5C92B289FCAD800F900C3 /* CourseCell.swift */,
-				5DA5C929289FCAD200F900C3 /* UserActionCell.swift */,
-				5DA5C927289FCACA00F900C3 /* Course.swift */,
+				5D869D9428A0DA4700702349 /* App */,
+				5D869D9728A0DA8A00702349 /* Controllers */,
+				5D869D9828A0DAE800702349 /* Services */,
+				5D869D9628A0DA8200702349 /* Views */,
+				5D869D9528A0DA7600702349 /* Models */,
 				5DA5C917289FCA8600F900C3 /* Main.storyboard */,
-				5DA5C91A289FCA8700F900C3 /* Assets.xcassets */,
+				5D869D9328A0DA2400702349 /* Resouces */,
 				5DA5C91C289FCA8700F900C3 /* LaunchScreen.storyboard */,
-				5DA5C91F289FCA8700F900C3 /* Info.plist */,
 			);
 			path = NetworkingApp;
 			sourceTree = "<group>";
@@ -95,6 +148,9 @@
 			dependencies = (
 			);
 			name = NetworkingApp;
+			packageProductDependencies = (
+				5D869D9C28A0DCCB00702349 /* Alamofire */,
+			);
 			productName = NetworkingApp;
 			productReference = 5DA5C90E289FCA8600F900C3 /* NetworkingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 5DA5C905289FCA8600F900C3;
+			packageReferences = (
+				5D869D9B28A0DCCB00702349 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 5DA5C90F289FCA8600F900C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,6 +213,7 @@
 				5DA5C92E289FCAED00F900C3 /* CoursesViewController.swift in Sources */,
 				5DA5C912289FCA8600F900C3 /* AppDelegate.swift in Sources */,
 				5DA5C92A289FCAD200F900C3 /* UserActionCell.swift in Sources */,
+				5D869D9A28A0DB0400702349 /* NetworkManager.swift in Sources */,
 				5DA5C92C289FCAD800F900C3 /* CourseCell.swift in Sources */,
 				5DA5C928289FCACA00F900C3 /* Course.swift in Sources */,
 				5DA5C926289FCABF00F900C3 /* MainViewController.swift in Sources */,
@@ -305,7 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Q8N9R5J2V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NetworkingApp/Info.plist;
+				INFOPLIST_FILE = NetworkingApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,7 +393,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Q8N9R5J2V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NetworkingApp/Info.plist;
+				INFOPLIST_FILE = NetworkingApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -374,6 +434,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D869D9B28A0DCCB00702349 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D869D9C28A0DCCB00702349 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D869D9B28A0DCCB00702349 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DA5C906289FCA8600F900C3 /* Project object */;
 }
